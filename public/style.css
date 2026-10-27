@@ -16,71 +16,85 @@
   --radius-md: 14px;
   --radius-sm: 10px;
 
-  /* Permukaan & teks — mode terang */
-  --bg: #f2f2f5;
-  --bg-solid: #ffffff;
-  --text: #1d1d1f;
-  --text-2: #5c5c63;
-  --text-3: #6e6e73;
-  --separator: rgba(60, 60, 67, 0.12);
-  --hairline: rgba(60, 60, 67, 0.08);
+  /* Permukaan & teks — mode terang (kuning pastel) */
+  --bg: #fff3b0;
+  --bg-solid: #fffdf0;
+  --text: #540b0e;
+  --text-2: #6b2f2c;
+  --text-3: #7d4a3f;
+  --separator: rgba(84, 11, 14, 0.18);
+  --hairline: rgba(84, 11, 14, 0.11);
 
-  --surface: rgba(255, 255, 255, 0.72);
+  --surface: rgba(255, 252, 236, 0.78);
   --surface-border: rgba(255, 255, 255, 0.7);
-  --field: rgba(118, 118, 128, 0.09);
-  --field-hover: rgba(118, 118, 128, 0.13);
-  --field-focus: rgba(118, 118, 128, 0.14);
-  --row-hover: rgba(0, 0, 0, 0.022);
+  --field: rgba(84, 11, 14, 0.07);
+  --field-hover: rgba(84, 11, 14, 0.1);
+  --field-focus: rgba(84, 11, 14, 0.12);
+  --row-hover: rgba(84, 11, 14, 0.04);
 
-  --accent: #0071e3;
-  --accent-fill: #0071e3;
-  --accent-fill-hover: #0063c7;
-  --accent-tint: rgba(0, 113, 227, 0.14);
-  --danger: #d70015;
-  --danger-tint: rgba(215, 0, 21, 0.1);
+  --accent: #9e2a2b;
+  --accent-ink: #7d1f20;
+  --accent-fill: #9e2a2b;
+  --accent-fill-hover: #862324;
+  --accent-tint: rgba(158, 42, 43, 0.14);
+  --on-accent: #fff3b0;
+  --gold-ink: #8a5a12;
+  --gold-tint: rgba(224, 159, 62, 0.18);
+  --teal: #335c67;
+  --teal-tint: rgba(51, 92, 103, 0.14);
+  --danger: #9e2a2b;
+  --danger-tint: rgba(158, 42, 43, 0.12);
+  --on-danger: #fffdf0;
 
-  --toolbar-bg: rgba(242, 242, 245, 0.72);
-  --toolbar-fade: rgba(242, 242, 245, 0.72);
-  --toast-bg: rgba(28, 28, 30, 0.8);
-  --toast-text: #f5f5f7;
-  --segment: #ffffff;
+  --toolbar-bg: rgba(255, 243, 176, 0.75);
+  --toolbar-fade: rgba(255, 243, 176, 0.72);
+  --toast-bg: rgba(60, 10, 12, 0.9);
+  --toast-text: #fff3b0;
+  --ambient-2: rgba(224, 159, 62, 0.22);
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-panel: 0 1px 1px rgba(0, 0, 0, 0.03), 0 14px 34px -18px rgba(0, 0, 0, 0.24);
-  --shadow-float: 0 18px 48px -20px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 1px 2px rgba(84, 11, 14, 0.1);
+  --shadow-panel: 0 1px 1px rgba(84, 11, 14, 0.05), 0 14px 34px -18px rgba(84, 11, 14, 0.32);
+  --shadow-float: 0 18px 48px -20px rgba(60, 10, 12, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #000000;
-    --bg-solid: #1c1c1e;
-    --text: #f5f5f7;
-    --text-2: #a1a1a6;
-    --text-3: #98989d;
-    --separator: rgba(84, 84, 88, 0.5);
-    --hairline: rgba(255, 255, 255, 0.08);
+    --bg: #2b0709;
+    --bg-solid: #3a0a0c;
+    --text: #fff3b0;
+    --text-2: #dfc39f;
+    --text-3: #c2a184;
+    --separator: rgba(255, 243, 176, 0.16);
+    --hairline: rgba(255, 243, 176, 0.09);
 
-    --surface: rgba(28, 28, 30, 0.72);
-    --surface-border: rgba(255, 255, 255, 0.09);
-    --field: rgba(118, 118, 128, 0.24);
-    --field-hover: rgba(118, 118, 128, 0.3);
-    --field-focus: rgba(118, 118, 128, 0.34);
-    --row-hover: rgba(255, 255, 255, 0.035);
+    --surface: rgba(84, 11, 14, 0.5);
+    --surface-border: rgba(255, 243, 176, 0.1);
+    --field: rgba(255, 243, 176, 0.1);
+    --field-hover: rgba(255, 243, 176, 0.14);
+    --field-focus: rgba(255, 243, 176, 0.17);
+    --row-hover: rgba(255, 243, 176, 0.04);
 
-    --accent: #0a84ff;
-    --accent-fill: #0a6ed1;
-    --accent-fill-hover: #0d74d8;
-    --accent-tint: rgba(10, 132, 255, 0.24);
-    --danger: #ff453a;
-    --danger-tint: rgba(255, 69, 58, 0.16);
+    --accent: #e09f3e;
+    --accent-ink: #e09f3e;
+    --accent-fill: #e09f3e;
+    --accent-fill-hover: #eab257;
+    --accent-tint: rgba(224, 159, 62, 0.2);
+    --on-accent: #3a0a0c;
+    --gold-ink: #e09f3e;
+    --gold-tint: rgba(224, 159, 62, 0.18);
+    --teal: #7fb3bf;
+    --teal-tint: rgba(127, 179, 191, 0.16);
+    --danger: #ef8a7d;
+    --danger-tint: rgba(239, 138, 125, 0.16);
+    --on-danger: #2b0709;
 
-    --toolbar-bg: rgba(0, 0, 0, 0.66);
-    --toolbar-fade: rgba(0, 0, 0, 0.72);
-    --toast-bg: rgba(58, 58, 60, 0.84);
-    --toast-text: #f5f5f7;
-    --segment: #48484a;
+    --toolbar-bg: rgba(43, 7, 9, 0.7);
+    --toolbar-fade: rgba(43, 7, 9, 0.72);
+    --toast-bg: rgba(70, 10, 13, 0.9);
+    --toast-text: #fff3b0;
+    --ambient-2: rgba(224, 159, 62, 0.12);
 
-    --shadow-panel: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 40px -22px rgba(0, 0, 0, 0.9);
+    --shadow-panel: inset 0 1px 0 rgba(255, 243, 176, 0.05), 0 18px 40px -22px rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -104,7 +118,7 @@ body {
   background-color: var(--bg);
   background-image:
     radial-gradient(58vw 42vw at 6% -12%, var(--accent-tint), transparent 62%),
-    radial-gradient(46vw 38vw at 102% 2%, rgba(255, 159, 10, 0.1), transparent 60%);
+    radial-gradient(46vw 38vw at 102% 2%, var(--ambient-2), transparent 60%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -181,7 +195,7 @@ body {
 }
 
 .rate-badges strong {
-  color: var(--text);
+  color: var(--gold-ink);
   font-weight: 650;
 }
 
@@ -406,8 +420,8 @@ select:focus {
   left: 0;
   height: calc(100% - 8px);
   border-radius: 11px;
-  background: var(--segment);
-  box-shadow: var(--shadow-sm), 0 6px 14px -8px rgba(0, 0, 0, 0.35);
+  background: var(--accent-fill);
+  box-shadow: var(--shadow-sm), 0 6px 16px -8px var(--accent-fill);
   will-change: transform, width;
   z-index: 0;
 }
@@ -438,11 +452,11 @@ select:focus {
 }
 
 .radio-card.is-active {
-  color: var(--text);
+  color: var(--on-accent);
 }
 
 @media (hover: hover) {
-  .radio-card:hover {
+  .radio-card:not(.is-active):hover {
     color: var(--text);
   }
 }
@@ -569,7 +583,7 @@ select:focus {
 
 .btn-primary {
   flex: 1;
-  color: #ffffff;
+  color: var(--on-accent);
   background-color: var(--accent-fill);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 12px 26px -16px var(--accent-fill);
 }
@@ -646,10 +660,10 @@ select:focus-visible {
 .count-pill {
   padding: 2px 8px;
   border-radius: 999px;
-  background: var(--field);
+  background: var(--gold-tint);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--text-3);
+  color: var(--text-2);
   font-variant-numeric: tabular-nums;
 }
 
@@ -714,12 +728,12 @@ td.customer {
 }
 
 .badge.tunai {
-  color: var(--danger);
-  background: var(--danger-tint);
+  color: var(--teal);
+  background: var(--teal-tint);
 }
 
 .badge.kredit {
-  color: var(--accent);
+  color: var(--accent-ink);
   background: var(--accent-tint);
 }
 
@@ -753,7 +767,7 @@ td.customer {
 
 @media (hover: hover) {
   .icon-btn:hover {
-    color: #ffffff;
+    color: var(--on-danger);
     background: var(--danger);
   }
 }

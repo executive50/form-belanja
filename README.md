@@ -27,6 +27,7 @@ Dibuat dengan:
 Antarmuka mengikuti prinsip *apple-design* (fluid interfaces):
 
 - **Material translusen** — toolbar sticky dan panel memakai `backdrop-filter` sehingga konten mengalir di bawahnya.
+- **Palet** — maroon `#540b0e`, merah bata `#9e2a2b`, emas `#e09f3e`, kuning pastel `#fff3b0`, dan teal `#335c67`.
 - **Spring, bukan durasi tetap** — panel kredit, indikator segmented control, dan toast dianimasikan dengan spring (`damping` 1.0) yang bisa dibalik di tengah jalan.
 - **Feedback instan** — tombol dan kartu metode memberi respons pada saat ditekan (`:active`), bukan saat dilepas.
 - **Tipografi optik** — font sistem, tracking negatif untuk judul besar, `tabular-nums` untuk angka rupiah.
