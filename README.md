@@ -5,7 +5,7 @@ Aplikasi web sederhana untuk mencatat transaksi penjualan elektronik (TV, Kulkas
 Dibuat dengan:
 
 - **HTML** — struktur form dan tabel riwayat
-- **CSS** — tema papan tulis (chalkboard) yang responsif
+- **CSS** — material translusen, tipografi sistem, mode terang/gelap otomatis, dan motion berbasis spring (gaya Apple)
 - **Node.js + Express** — server, API, dan penyimpanan data JSON
 
 ## Fitur
@@ -22,10 +22,20 @@ Dibuat dengan:
 - Riwayat transaksi tersimpan di `data/transactions.json`.
 - Hapus transaksi dari tabel riwayat.
 
+## Desain & motion
+
+Antarmuka mengikuti prinsip *apple-design* (fluid interfaces):
+
+- **Material translusen** — toolbar sticky dan panel memakai `backdrop-filter` sehingga konten mengalir di bawahnya.
+- **Spring, bukan durasi tetap** — panel kredit, indikator segmented control, dan toast dianimasikan dengan spring (`damping` 1.0) yang bisa dibalik di tengah jalan.
+- **Feedback instan** — tombol dan kartu metode memberi respons pada saat ditekan (`:active`), bukan saat dilepas.
+- **Tipografi optik** — font sistem, tracking negatif untuk judul besar, `tabular-nums` untuk angka rupiah.
+- **Adaptif** — mengikuti mode terang/gelap sistem, serta menghormati `prefers-reduced-motion`, `prefers-reduced-transparency`, dan `prefers-contrast`.
+
 ## Cara menjalankan
 
 ```bash
-cd E:\iot\form-belanja
+cd "E:\Pemrograman 2\form-belanja"
 npm install
 npm start
 ```
