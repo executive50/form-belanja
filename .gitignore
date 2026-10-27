@@ -1,0 +1,4 @@
+node_modules/
+data/transactions.json
+*.log
+.DS_Store

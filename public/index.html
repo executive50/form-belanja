@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Belanja | Toko Elektronik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chalk-dust"></div>
+
+  <header class="board-header">
+    <p class="eyebrow">Toko Elektronik</p>
+    <h1>FORM BELANJA</h1>
+    <p class="subtitle">Transaksi tunai &amp; kredit — TV, Kulkas, Mesin Cuci, AC</p>
+    <div class="rate-badges" aria-label="Suku bunga bank">
+      <span>BCA <strong>5,5%</strong></span>
+      <span>BNI <strong>7%</strong></span>
+      <span>CIMB Niaga <strong>6,75%</strong></span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel form-panel" aria-labelledby="judulForm">
+      <h2 id="judulForm" class="visually-hidden">Form transaksi belanja</h2>
+
+      <form id="formBelanja" autocomplete="off">
+        <div class="field-row">
+          <label for="customer">Customer</label>
+          <input type="text" id="customer" name="customer" placeholder="Nama customer" required>
+        </div>
+
+        <div class="field-row">
+          <label for="tanggal">Tgl Trsk</label>
+          <input type="date" id="tanggal" name="tanggal" required>
+        </div>
+
+        <div class="field-row">
+          <label for="jenis">Jenis</label>
+          <select id="jenis" name="jenis" required>
+            <option value="TV">TV</option>
+            <option value="Kulkas">Kulkas</option>
+            <option value="Mesin Cuci">Mesin Cuci</option>
+            <option value="AC">AC</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <label for="jumlah">Jlh</label>
+          <div class="inline-input">
+            <input type="number" id="jumlah" name="jumlah" min="1" step="1" value="1" required>
+            <span>Unit</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label for="harga">Harga</label>
+          <div class="input-prefix">
+            <span>Rp</span>
+            <input type="number" id="harga" name="harga" min="0" step="1000" placeholder="0" required>
+          </div>
+        </div>
+
+        <fieldset class="metode">
+          <legend>Metode Bayar</legend>
+          <div class="metode-options">
+            <label class="radio-card tunai is-active">
+              <input type="radio" name="metode" value="tunai" checked>
+              <span>TUNAI</span>
+            </label>
+            <label class="radio-card kredit">
+              <input type="radio" name="metode" value="kredit">
+              <span>KREDIT</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div id="kreditPanel" class="credit-panel is-hidden">
+          <div class="field-row">
+            <label for="bank">Bank</label>
+            <select id="bank" name="bank">
+              <option value="BCA">BCA — 5,5% / tahun</option>
+              <option value="BNI">BNI — 7% / tahun</option>
+              <option value="CIMB Niaga">CIMB Niaga — 6,75% / tahun</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <label for="tenor">Tenor</label>
+            <div class="inline-input">
+              <input type="number" id="tenor" name="tenor" min="1" step="1" value="12">
+              <span>Bulan</span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label for="dp">DP</label>
+            <div class="input-prefix">
+              <span>Rp</span>
+              <input type="number" id="dp" name="dp" min="0" step="1000" value="0">
+            </div>
+          </div>
+
+          <div class="field-row readout">
+            <label for="saldo">Saldo</label>
+            <output id="saldo">Rp 0</output>
+          </div>
+
+          <div class="field-row readout">
+            <label for="bunga">Bunga</label>
+            <output id="bunga">Rp 0</output>
+          </div>
+
+          <div class="field-row readout">
+            <label for="pokokCicilan">Pokok Cicilan</label>
+            <output id="pokokCicilan">Rp 0 / bulan</output>
+          </div>
+        </div>
+
+        <div class="summary" aria-live="polite">
+          <div class="summary-row">
+            <span>Total Belanja</span>
+            <strong id="totalBelanja">Rp 0</strong>
+          </div>
+          <div class="summary-row">
+            <span>DP</span>
+            <strong id="summaryDp">Rp 0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Bunga</span>
+            <strong id="summaryBunga">Rp 0</strong>
+          </div>
+          <div class="summary-row total">
+            <span>Total Bayar</span>
+            <strong id="totalBayar">Rp 0</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Simpan Transaksi</button>
+          <button type="button" id="resetBtn" class="btn-ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel history-panel" aria-labelledby="judulRiwayat">
+      <div class="history-head">
+        <h2 id="judulRiwayat">Riwayat Transaksi</h2>
+        <button type="button" id="refreshBtn" class="btn-ghost small">Muat ulang</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Tanggal</th>
+              <th>Barang</th>
+              <th>Total</th>
+              <th>Metode</th>
+              <th>Detail</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="historyBody">
+            <tr class="empty-row">
+              <td colspan="7">Belum ada transaksi.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
